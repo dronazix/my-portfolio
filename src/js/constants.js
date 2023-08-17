@@ -1,4 +1,4 @@
-export const CONTENT_URL = '/content.json'
+export const CONTENT_URL = 'content.json'
 export const API_URL = 'https://api.github.com'
 export const MANIFEST_FILE_NAME = 'portfolio-manifest.json'
 export const DELAY_AFTER_PRELOADER = 2000

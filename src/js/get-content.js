@@ -11,7 +11,7 @@ import {wait} from './wait.js'
 export function getContent() {
   let attempts = MAX_REQUEST_ATTEMPTS
 
-  const request = () => fetch(CONTENT_URL)
+  const request = () => fetch(`${window.location.origin}${window.location.pathname}${CONTENT_URL}`)
     .then(errorHandler)
     .then(json)
     .then((content) => Object.assign({}, defaultContent, content))
