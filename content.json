@@ -1,0 +1,21 @@
+{
+  "github": {
+    "username": "dddoog9",
+    "profile_url": "https://github.com/dddoog9"
+  },
+  "email": "",
+  "vk_url": "",
+  "telegram_url": "",
+  "code_templates": {
+    "hero": "/* Обо мне */\n\nclass I {\n  name = 'Андрей'\n  age = @__%%__AGE__%%__@\n  skills = [\n@__%    '%__SKILLS__%'%__@\n  ]\n}\n\nexport {I}\n",
+    "skills": "/* Мои умения */\n\nimport {I} from './i.js'\n\nconst i = new I()\n\nfunction showSkill(skill) {\n  console.log(skill)\n}\n\ni.skills.forEach(showSkill)\n\nexport {i}",
+    "contact": "/* Контакты */\n\nimport {i} from './skills.js'\n\ni.email = '@__%%__EMAIL__%%__@'\ni.vk = '@__%%__VK__%%__@'\ni.telegram = '@__%%__TELEGRAM__%%__@'\n\nexport {i}\n"
+  },
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Vue",
+    "React"
+  ]
+}
