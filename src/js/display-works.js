@@ -91,6 +91,12 @@ export function displayWorks(manifests) {
 
     msnry.layout()
 
+    manifests = manifests.map(function (manifest) {
+      manifest.created_at = new Date(manifest.created_at)
+
+      return manifest
+    })
+
     manifests.sort(function (a, b) {
       return (
         (a.pin === 0) - (b.pin === 0) || Math.abs(a.pin) - Math.abs(b.pin)
