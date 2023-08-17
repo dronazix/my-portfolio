@@ -1,0 +1,81 @@
+.works {
+  $gutter: $gap-side * 2;
+
+  padding: 90px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %typo-heading-2;
+
+    align-self: center;
+    text-align: center;
+  }
+
+  &__empty {
+    margin-top: 64px;
+    padding: 90px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    &_disabled {
+      display: none;
+    }
+  }
+
+  &__empty-text {
+    @extend %typo-large-text;
+
+    color: $works-empty-text-color;
+
+    text-align: center;
+    user-select: none;
+  }
+
+  &__grid {
+    margin-top: 64px;
+    margin-bottom: -$gutter;
+
+    &_disabled {
+      display: none;
+    }
+  }
+
+  &__work-card {
+    margin-bottom: $gutter;
+
+    animation: fade-in-left 1s ease-in-out;
+  }
+
+  &__work-card-sizer,
+  &__work-card {
+    width: calc(33.333333% - $gutter);
+
+    @include lg {
+      width: calc(50% - $gutter);
+    }
+
+    @include md {
+      width: 100%;
+    }
+  }
+
+  &__gutter-sizer {
+    width: $gutter;
+  }
+
+  &__button {
+    margin-top: 48px;
+
+    align-self: center;
+
+    &_disabled {
+      display: none;
+    }
+  }
+}

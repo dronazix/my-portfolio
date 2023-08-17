@@ -1,0 +1,27 @@
+.nav {
+  &__list {
+    @include list-reset;
+
+    display: flex;
+  }
+
+  &__item {
+    &:nth-child(n+2) {
+      margin-left: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $nav-link-color;
+    white-space: nowrap;
+
+    @extend %typo-nav-link;
+
+    line-height: 1.4;
+
+    &:hover {
+      color: $accent-1;
+    }
+  }
+}

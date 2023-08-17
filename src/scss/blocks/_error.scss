@@ -1,0 +1,56 @@
+.error {
+  background-color: $main-bg;
+
+  &__inner {
+    box-sizing: border-box;
+
+    display: flex;
+
+    padding-left: $gap-side;
+    padding-right: $gap-side;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__label {
+    @extend %typo-heading-2;
+
+    color: $error-label-color;
+  }
+
+  &__title {
+    @extend %typo-heading-4;
+
+    margin-top: 32px;
+
+    text-align: center;
+  }
+
+  &__description {
+    @extend %typo-normal-text;
+
+    margin-top: 16px;
+
+    text-align: center;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    position: absolute;
+    bottom: $error-logo-bottom;
+
+    width: $error-logo-width;
+    height: $error-logo-height;
+
+    background-image: url(images/grey-logo.svg);
+    background-size: 100%;
+  }
+}

@@ -1,0 +1,37 @@
+.hamburger-menu {
+  $icon-width: 32px;
+  $icon-height: 32px;
+
+  background-color: $main-bg;
+
+  box-sizing: border-box;
+
+  padding-left: $hamburger-menu-padding-left;
+  padding-right: $hamburger-menu-padding-right;
+
+  &__logo {
+    padding-top: $hamburger-menu-logo-padding-top;
+  }
+
+  &__nav {
+    padding: 48px 0;
+  }
+
+  &__github {
+    position: fixed;
+    left: 100% - $page-translate-for-hamburger;
+    bottom: $hamburger-menu-github-padding-bottom;
+
+    margin-left: $hamburger-menu-padding-left;
+
+    @include icon(
+      'images/icons/github.svg',
+      $icon-width,
+      $icon-height
+    );
+
+    &:hover {
+      filter: brightness($icon-filter-brightness-value);
+    }
+  }
+}

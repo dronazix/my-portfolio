@@ -1,0 +1,78 @@
+.hamburger-button {
+  $icon-menu: null;
+  $icon-close: null;
+
+  @include button-reset;
+
+  display: block;
+
+  background-color: $main-bg;
+  border: 1px solid $hamburger-button-border-color;
+  border-radius: 12px;
+
+  width: $hamburger-button-width;
+  height: $hamburger-button-height;
+
+  &:hover {
+    border-color: $accent-1;
+  }
+
+  &__inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    position: absolute;
+
+    transition: opacity 0.2s ease-in-out;
+
+    &_menu {
+      $icon-menu: &;
+
+      @include icon(
+        'images/icons/menu.svg',
+        $hamburger-button-icon-menu-width,
+        $hamburger-button-icon-menu-height
+      );
+
+      z-index: 0;
+
+      opacity: 1;
+    }
+
+    &_close {
+      $icon-close: &;
+
+      @include icon(
+        'images/icons/close.svg',
+        $hamburger-button-icon-close-width,
+        $hamburger-button-icon-close-height
+      );
+
+      z-index: 1;
+
+      opacity: 0;
+    }
+  }
+
+  &_active {
+    #{$icon-menu} {
+      opacity: 0;
+    }
+
+    #{$icon-close} {
+      opacity: 1;
+    }
+
+    &:hover {
+      border-color: $accent-2;
+    }
+  }
+}

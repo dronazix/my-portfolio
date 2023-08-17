@@ -1,0 +1,193 @@
+// palette
+$light: #f0f0f0;
+$light-grey: #c0c0c0;
+$grey: #404040;
+$dark: #101010;
+$green: #00cf91;
+$pink: #ff2970;
+$light-blue: #bdccff;
+$blue: #7ab1ff;
+
+// for grid
+$max-content: 1140px;
+$gap-side: 12px;
+
+// section
+$section-top-bottom-padding: 90px;
+
+// colors
+$main-bg: $dark;
+$accent-1: $green;
+$accent-2: $pink;
+
+// for typo
+$base-font-size: 18px;
+$tablet-font-size: 17px;
+$mobile-font-size: 16px;
+$heading-1-factor: 3;
+$heading-2-factor: 2;
+$heading-4-factor: 1.25;
+$large-text-factor: 1.25;
+$small-text-factor: 0.75;
+
+// for typo headings
+$heading-color: $light;
+$heading-font-stack: 'Montserrat', sans-serif;
+
+// for typo texts
+$text-color: $light-grey;
+$text-font-stack: 'Open Sans', sans-serif;
+
+// for typo nav links
+$nav-link-color: $light;
+$nav-link-font-stack: 'Montserrat', sans-serif;
+
+// for typo button texts
+$button-font-stack: 'Montserrat', sans-serif;
+$button-color: $accent-2;
+$button-border-color: $accent-2;
+
+// code
+$code-border-color: $grey;
+$code-font-stack: 'JetBrains Mono NL', monospace;
+$code-font-size: 13px;
+$code-color: $light-blue;
+$code-line-number-color: $grey;
+$code-active-line-number-color: $light-grey;
+$code-caret-width: 8px;
+$code-caret-color: $light-grey;
+$code-terminal-color: $light-grey;
+$code-terminal-highlighting-tilda-color: $blue;
+$code-terminal-highlighting-keyword-color: $green;
+
+// skill-list
+$skill-list-circle-color: $green;
+$skill-list-circle-size: 4px;
+$skill-list-text-color: $light;
+
+// contact-form
+$contact-form-border-color: $grey;
+$contact-form-border-radius: 12px;
+$contact-form-color: $light;
+$contact-form-placeholder-color: $grey;
+
+// work-card
+$work-card-header-bg: $grey;
+$work-card-border-color: $grey;
+$work-card-border-radius: 12px;
+$work-card-tag-color: $green;
+
+$breakpoints: (
+  xxl: 1320px,
+  xl: 1140px,
+  lg: 960px,
+  md: 720px,
+  sm: 540px
+);
+
+// hamburger-button
+$hamburger-button-width: 48px;
+$hamburger-button-height: 48px;
+$hamburger-button-border-color: $grey;
+$hamburger-button-icon-menu-width: 24px;
+$hamburger-button-icon-menu-height: 20px;
+$hamburger-button-icon-close-width: 24px;
+$hamburger-button-icon-close-height: 24px;
+
+// hamburger-menu
+$hamburger-menu-border-color: $grey;
+$hamburger-menu-padding-left: 24px;
+$hamburger-menu-padding-right: 24px;
+$hamburger-menu-logo-padding-top: 24px;
+$hamburger-menu-github-padding-bottom: 24px;
+$hamburger-menu-item-circle-width: 4px;
+$hamburger-menu-item-circle-height: 4px;
+$hamburger-menu-item-circle-bg: $accent-1;
+
+// page
+$page-translate-for-hamburger: 75%;
+$page-burger-button-right: 12px;
+$page-burger-button-bottom: 12px;
+$page-up-button-right: 12px;
+$page-up-button-bottom: 12px;
+
+// loading-bar
+// $loading-bar-height: 6px;
+// $loading-bar-border-radius: 12px;
+// $loading-bar-bg: $grey;
+// $loading-bar-strip-bg: $light;
+$loading-bar-gradient: linear-gradient($accent-1, $light, $accent-2);
+$loading-bar-size: 48px;
+$loading-bar-margin: 4px;
+$loading-bar-border-radius: 12px;
+
+// animations start
+
+// nav
+$animation-duration-nav: 1s;
+$animation-delay-nav: 2s;
+
+// hello
+$animation-duration-hello: 1s;
+$animation-delay-hello: 2s;
+
+// title
+$animation-duration-title: 1s;
+$animation-delay-title: 2s;
+
+// desc
+$animation-duration-desc: 1s;
+$animation-delay-desc: 2s;
+
+// buttons
+$animation-duration-buttons: 1s;
+$animation-delay-buttons: 2s;
+
+// code
+$animation-duration-code: 1s;
+$animation-delay-code: 2s;
+// animations end
+
+// transitions
+$transition-duration-preloader: 1s;
+$transition-delay-preloader: 1s;
+
+// light
+$light-width: 200px;
+$light-height: 200px;
+$light-bg: $accent-2;
+$light-blur-value: 150px;
+
+// up-button
+$up-button-width: 48px;
+$up-button-height: 48px;
+$up-button-icon-width: 24px;
+$up-button-icon-height: 13px;
+$up-button-border-color: $grey;
+
+// icon
+$icon-filter-brightness-value: 300%;
+
+// preloader
+$preloader-logo-width: 115px;
+$preloader-logo-height: 31px;
+$preloader-logo-bottom: 32px;
+
+// works
+$works-empty-text-color: $grey;
+
+// error
+$error-label-color: $pink;
+$error-logo-bottom: 32px;
+$error-logo-width: 115px;
+$error-logo-height: 31px;
+
+// notification
+$notification-border-color: $grey;
+$notification-error-border-color: $pink;
+$notification-success-border-color: $green;
+
+// alert
+$alert-border-color: $grey;
+$alert-progress-color: $grey;
+$alert-close-button-icon-color: $grey;

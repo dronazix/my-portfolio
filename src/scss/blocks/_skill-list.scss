@@ -1,0 +1,36 @@
+.skill-list {
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    display: flex;
+
+    &::before {
+      content: '';
+
+      display: block;
+
+      width: $skill-list-circle-size;
+      height: $skill-list-circle-size;
+
+      border-radius: 50%;
+      background-color: $skill-list-circle-color;
+
+      align-self: center;
+
+      margin-left: 11px;
+      margin-right: 12px;
+    }
+
+    &:nth-child(n+2) {
+      margin-top: 4px;
+    }
+  }
+
+  &__text {
+    @extend %typo-normal-text;
+
+    color: $skill-list-text-color;
+  }
+}

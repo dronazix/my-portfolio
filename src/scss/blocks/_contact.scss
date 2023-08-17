@@ -1,0 +1,64 @@
+.contact {
+  padding: 90px 0;
+  padding-bottom: 180px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %typo-heading-2;
+
+    align-self: center;
+    text-align: center;
+  }
+
+  &__row {
+    margin-top: 64px;
+  }
+
+  &__content {}
+
+  &__desc {
+    @extend %typo-normal-text;
+  }
+
+  &__email {
+    @extend %typo-large-text;
+
+    color: $accent-1;
+    margin-top: 24px;
+  }
+
+  &__links {
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    &:nth-child(n+2) {
+      margin-left: 24px;
+    }
+
+    &_icon_vk {
+      @include icon('images/icons/vk.svg', 33px, 21px)
+    }
+
+    &_icon_telegram {
+      @include icon('images/icons/tg.svg', 29px, 26px)
+    }
+
+    &:hover {
+      filter: brightness($icon-filter-brightness-value);
+    }
+  }
+
+  &__code {
+    @include md {
+      margin-top: 32px;
+    }
+  }
+}

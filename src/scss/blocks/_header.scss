@@ -1,0 +1,30 @@
+.header {
+  padding-top: 24px;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    @include md {
+      display: none;
+    }
+
+    animation-name: fade-in-left;
+    animation-duration: $animation-duration-nav;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-nav;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+}

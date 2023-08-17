@@ -1,0 +1,23 @@
+$class-prefix: 'CH' !default;
+
+$colors: (
+  comment: #404040,
+  string: #ff2970,
+  keyword: #7ab1ff,
+  operator: #f0f0f0,
+  bracket: #f0f0f0,
+  dot: #f0f0f0,
+  digit: #7ab1ff,
+  standard-object: #00cf91,
+  custom-standard-object: #00cf91,
+  class-name: #00cf91,
+  variable-name: #bdccff,
+  function-name: #c0c0c0,
+  called-function-name: #c0c0c0
+) !default;
+
+@each $name, $color in $colors {
+  .#{$class-prefix}-#{$name} {
+    color: $color;
+  }
+}

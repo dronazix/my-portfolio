@@ -1,0 +1,96 @@
+.hero {
+  padding: 272px 0;
+
+  @include md {
+    padding: 136px 0;
+  }
+
+  &__row {
+    align-items: center;
+
+    @include md {
+      align-items: stretch;
+    }
+  }
+
+  &__content {}
+
+  &__hello {
+    @extend %typo-large-text;
+
+    color: $accent-1;
+    animation-name: fade-in-right;
+    animation-duration: $animation-duration-hello;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-hello;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+
+  &__title {
+    @extend %typo-heading-1;
+
+    margin-top: 4px;
+    animation-name: fade-in-right;
+    animation-duration: $animation-duration-title;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-title;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+
+  &__desc {
+    @extend %typo-normal-text;
+
+    margin-top: 16px;
+    animation-name: fade-in-right;
+    animation-duration: $animation-duration-desc;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-desc;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+
+  &__buttons {
+    margin-top: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 16px;
+
+    animation-name: fade-in-up-50;
+    animation-duration: $animation-duration-buttons;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-buttons;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+
+  &__contact-button {
+    margin-right: 32px;
+  }
+
+  &__link-icon {
+    @include icon('images/icons/github.svg', 32px, 32px);
+
+    flex-shrink: 0;
+
+    &:hover {
+      filter: brightness($icon-filter-brightness-value);
+    }
+  }
+
+  &__code {
+    @include md {
+      margin-top: 32px;
+    }
+
+    animation-name: fade-in-left;
+    animation-duration: $animation-duration-code;
+    animation-timing-function: ease-in-out;
+    animation-delay: $animation-delay-code;
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+  }
+}

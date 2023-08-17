@@ -1,0 +1,27 @@
+.up-button {
+  display: block;
+  box-sizing: border-box;
+
+  background-color: $main-bg;
+  border: 1px solid $up-button-border-color;
+  border-radius: 12px;
+
+  width: $up-button-width;
+  height: $up-button-height;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-color: $accent-1;
+  }
+
+  &__icon {
+    @include icon(
+      'images/icons/up.svg',
+      $up-button-icon-width,
+      $up-button-icon-height
+    );
+  }
+}

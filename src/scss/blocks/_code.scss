@@ -1,0 +1,133 @@
+.code {
+  background-color: $main-bg;
+  border: 1px solid $code-border-color;
+  border-radius: 12px;
+
+  &__header {
+    height: 32px;
+
+    border-bottom: 1px solid $code-border-color;
+  }
+
+  &__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    display: flex;
+
+    @extend %typo-code-text;
+  }
+
+  &__line-numbers {
+    margin-left: 16px;
+
+    user-select: none;
+
+    color: $code-line-number-color;
+  }
+
+  &__line-number {
+    text-align: right;
+
+    &_current {
+      color: $code-active-line-number-color;
+    }
+  }
+
+  &__code-container {
+    margin-left: 16px;
+
+    flex: 1 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    overflow: hidden;
+  }
+
+  &__code-line {
+    position: relative;
+
+    &_caret::after {
+      content: '';
+
+      box-sizing: border-box;
+      display: block;
+
+      position: absolute;
+      left: 100%;
+      top: 0;
+
+      width: $code-caret-width;
+      height: 100%;
+
+      background-color: $code-caret-color;
+    }
+
+    &_caret-unfocus::after {
+      border: 1px solid $code-caret-color;
+
+      background-color: transparent;
+    }
+
+    &_caret-blinking::after {
+      animation: caret-blinking 1s ease-in-out infinite;
+    }
+  }
+
+  &__terminal {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    overflow: hidden;
+
+    background-color: $main-bg;
+    border-top: 1px solid $code-border-color;
+    border-radius: 0 0 12px 12px;
+
+    &-container {
+      margin-left: 16px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-line {
+      position: relative;
+
+      @extend %typo-code-text;
+
+      color: $code-terminal-color;
+      word-break: break-all;
+    }
+
+    &-highlighting {
+      &-tilda {
+        color: $code-terminal-highlighting-tilda-color;
+      }
+
+      &-keyword {
+        color: $code-terminal-highlighting-keyword-color;
+      }
+    }
+
+    &-caret::after {
+      content: '';
+
+      display: block;
+
+      position: absolute;
+      left: 100%;
+      top: 0;
+
+      width: $code-caret-width;
+      height: 100%;
+
+      background-color: $code-caret-color;
+
+      animation: caret-blinking 1s ease-in-out infinite;
+    }
+  }
+}

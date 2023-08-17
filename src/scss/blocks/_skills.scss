@@ -1,0 +1,41 @@
+.skills {
+  padding: 90px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %typo-heading-2;
+
+    align-self: center;
+    text-align: center;
+  }
+
+  &__row {
+    margin-top: 64px;
+    align-items: center;
+
+    @include md {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+  }
+
+  &__code {
+    @include md {
+      margin-top: 32px;
+    }
+  }
+
+  &__content {}
+
+  &__desc {
+    @extend %typo-normal-text;
+  }
+
+  &__skill-list {
+    margin-top: 24px;
+  }
+}

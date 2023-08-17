@@ -1,0 +1,52 @@
+.container {
+  box-sizing: border-box;
+  max-width: map-get($breakpoints, xxl);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gap-side;
+  padding-right: $gap-side;
+
+  @include xxl {
+    max-width: map-get($breakpoints, xl);
+  }
+
+  @include xl {
+    max-width: map-get($breakpoints, lg);
+  }
+
+  @include lg {
+    max-width: map-get($breakpoints, md);
+  }
+
+  @include md {
+    max-width: map-get($breakpoints, sm);
+  }
+}
+
+.row {
+  display: flex;
+  margin-left: -$gap-side;
+  margin-right: -$gap-side;
+
+  @include md {
+    flex-direction: column;
+  }
+}
+
+.col {
+  flex: 1 0 0px;
+  margin-left: $gap-side;
+  margin-right: $gap-side;
+  min-width: 0;
+
+  @include md {
+    flex: 0 0 auto;
+  }
+}
+
+.help-link-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}

@@ -1,0 +1,32 @@
+body {
+  background-color: $main-bg;
+  scroll-behavior: smooth;
+  // overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  // outline: none;
+}
+
+h1, h2, h4,
+p {
+  margin: 0;
+}
+
+button {
+  // outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+}

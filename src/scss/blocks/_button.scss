@@ -1,0 +1,46 @@
+.button {
+  $this: &;
+
+  position: relative;
+
+  &[href] {
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  &:not([href]) {
+    @include button-reset;
+  }
+
+  &,
+  &__inner {
+    box-shadow: 0 0 0 1px inset $button-border-color;
+    border-radius: 12px;
+    background-color: $main-bg;
+  }
+
+  &__inner {
+    display: block;
+
+    @extend %typo-button-text;
+
+    color: $button-color;
+    white-space: nowrap;
+    padding: 10px 18px;
+    position: relative;
+    left: 4px;
+    bottom: 4px;
+    transition:
+      left 0.5s linear,
+      bottom 0.5s linear;
+  }
+
+  &:hover {
+    background-color: $accent-2;
+
+    #{$this}__inner {
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

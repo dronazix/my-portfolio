@@ -1,0 +1,117 @@
+@use 'sass:math';
+
+// headings
+%typo-heading-1,
+%typo-heading-2,
+%typo-heading-4 {
+  font-family: $heading-font-stack;
+  font-weight: 600;
+  color: $heading-color;
+}
+
+%typo-heading-1 {
+  font-size: math.round($base-font-size * $heading-1-factor);
+  line-height: 1.15;
+
+  @include lg {
+    font-size: math.round($tablet-font-size * $heading-1-factor);
+  }
+
+  @include sm {
+    font-size: math.round($mobile-font-size * $heading-1-factor);
+  }
+}
+
+%typo-heading-2 {
+  font-size: math.round($base-font-size * $heading-2-factor);
+  line-height: 1.3;
+
+  @include lg {
+    font-size: math.round($tablet-font-size * $heading-2-factor);
+  }
+
+  @include sm {
+    font-size: math.round($mobile-font-size * $heading-2-factor);
+  }
+}
+
+%typo-heading-4 {
+  font-size: math.round($base-font-size * $heading-4-factor);
+  line-height: 1.4;
+
+  @include lg {
+    font-size: math.round($tablet-font-size * $heading-4-factor);
+  }
+
+  @include sm {
+    font-size: math.round($mobile-font-size * $heading-4-factor);
+  }
+}
+
+// texts
+%typo-large-text,
+%typo-normal-text,
+%typo-small-text {
+  font-family: $text-font-stack;
+  color: $text-color;
+}
+
+%typo-large-text {
+  font-size: math.round($base-font-size * $large-text-factor);
+  line-height: 1.5;
+
+  @include lg {
+    font-size: math.round($tablet-font-size * $large-text-factor);
+  }
+
+  @include sm {
+    font-size: math.round($mobile-font-size * $large-text-factor);
+  }
+}
+
+%typo-normal-text,
+%typo-button-text {
+  font-size: $base-font-size;
+  line-height: 1.6;
+
+  @include lg {
+    font-size: $tablet-font-size;
+  }
+
+  @include sm {
+    font-size: $mobile-font-size;
+  }
+}
+
+%typo-button-text {
+  font-family: $button-font-stack;
+}
+
+%typo-small-text {
+  line-height: 1.7;
+}
+
+%typo-small-text,
+%typo-nav-link {
+  font-size: math.round($base-font-size * $small-text-factor);
+
+  @include lg {
+    font-size: math.round($tablet-font-size * $small-text-factor);
+  }
+
+  @include sm {
+    font-size: math.round($mobile-font-size * $small-text-factor);
+  }
+}
+
+%typo-nav-link {
+  font-family: $nav-link-font-stack;
+  line-height: 1.2;
+}
+
+%typo-code-text {
+  font-family: $code-font-stack;
+  font-size: $code-font-size;
+  line-height: 1.2;
+  color: $code-color;
+}

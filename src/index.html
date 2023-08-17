@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple.png">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="page page_no-scroll">
+  <!-- error -->
+  <div class="error page__error" id="error">
+    <div class="error__inner">
+      <div class="error__label">Error</div>
+      <div class="error__title">Что-то пошло не так</div>
+      <div class="error__description">Произошла техническая ошибка. Повторите попытку позже.</div>
+      <div class="error__logo"></div>
+    </div>
+  </div>
+  <!-- preloader -->
+  <div class="preloader page__preloader">
+    <div class="preloader__inner">
+      <div class="loading-bar preloader__loading-bar"></div>
+      <div class="preloader__logo"></div>
+    </div>
+  </div>
+  <!-- up-button -->
+  <a href="#hero" class="up-button page__up-button page__up-button_hide smooth-scroll" id="up-button">
+    <span class="up-button__icon"></span>
+  </a>
+  <!-- hamburger-button -->
+  <div class="page__hamburger-button">
+    <button class="hamburger-button" id="burger-button">
+      <div class="hamburger-button__inner">
+        <div class="hamburger-button__icon hamburger-button__icon_menu"></div>
+        <div class="hamburger-button__icon hamburger-button__icon_close"></div>
+      </div>
+    </button>
+  </div>
+  <!-- hamburger-menu -->
+  <div class="page__hamburger-menu-flag" id="burger-menu-flag"></div>
+  <div class="hamburger-menu page__hamburger-menu" id="burger-menu">
+    <a href="/" class="logo hamburger-menu__logo">
+      <img src="images/logo.svg" alt="Логотип" class="logo__img">
+    </a>
+    <nav class="hamburger-nav hamburger-menu__nav">
+      <ul class="hamburger-nav__list">
+        <li class="hamburger-nav__item hamburger-nav__item_current">
+          <a href="#hero" class="hamburger-nav__link smooth-scroll">Приветствие</a>
+        </li>
+        <li class="hamburger-nav__item">
+          <a href="#skills" class="hamburger-nav__link smooth-scroll">Навыки</a>
+        </li>
+        <li class="hamburger-nav__item">
+          <a href="#works" class="hamburger-nav__link smooth-scroll">Мои работы</a>
+        </li>
+        <li class="hamburger-nav__item">
+          <a href="#contact" class="hamburger-nav__link smooth-scroll">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="##" class="hamburger-menu__github js-github-link"></a>
+  </div>
+  <div class="page__content" id="page-content">
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <a href="/" class="logo header__logo">
+            <img src="images/logo.svg" alt="Логотип" class="logo__img">
+          </a>
+          <nav class="nav header__nav animation">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#skills" class="nav__link smooth-scroll">Навыки</a>
+              </li>
+              <li class="nav__item">
+                <a href="#works" class="nav__link smooth-scroll">Мои работы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link smooth-scroll">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="row hero__row">
+          <div class="col">
+            <div class="hero__content">
+              <p class="hero__hello animation">Привет!</p>
+              <h1 class="hero__title animation">Меня зовут Андрей</h1>
+              <p class="hero__desc animation js-age">Мне @__%%__AGE__%%__@, и я веб-разработчик.</p>
+              <div class="hero__buttons animation">
+                <a href="#contact" class="button hero__contact-button smooth-scroll">
+                  <span class="button__inner">Связаться со мной</span>
+                </a>
+                <a href="##" class="hero__link-icon js-github-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="code hero__code animation" id="hero-code">
+                <div class="code__header"></div>
+                <div class="code__content">
+                  <div class="code__line-numbers"></div>
+                  <div class="code__code-container"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills -->
+    <section class="skills" id="skills">
+      <div class="container skills__container">
+        <h2 class="skills__title">Навыки</h2>
+        <div class="row skills__row">
+          <div class="col">
+              <div class="code skills__code" id="skills-code">
+                <div class="code__header"></div>
+                <div class="code__content">
+                  <div class="code__line-numbers"></div>
+                  <div class="code__code-container"></div>
+                </div>
+                <div class="code__terminal">
+                  <div class="code__terminal-container">
+                    <p class="code__terminal-line"><span class="code__terminal-highlighting-tilda">~</span> <span class="code__terminal-highlighting-keyword">node</span> my-skills.js</p>
+                    <p class="code__terminal-line code__terminal-caret" id="last-line-terminal-skills"><span class="code__terminal-highlighting-tilda">~</span>&nbsp;</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="skills__content">
+              <p class="skills__desc">Я владею HTML, CSS и JavaScript, которые позволяют мне создавать красивые и функциональные веб-страницы. Кроме того, я также имею опыт работы с фреймворком Vue, который позволяет создавать масштабируемые и гибкие приложения. Я уверен, что мои навыки помогут мне создавать качественные веб-проекты, которые будут удовлетворять потребности моих клиентов.</p>
+              <div class="skill-list skills__skill-list" id="skill-list">
+                <ul class="skill-list__list">
+                  <!-- skill-list-item template -->
+                  <li class="skill-list__item" id="skill-list-item-template" style="display: none;">
+                    <p class="skill-list__text">TEXT</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- works -->
+    <section class="works" id="works">
+      <div class="container works__container">
+        <h2 class="works__title">Мои работы</h2>
+        <div class="works__empty">
+          <p class="works__empty-text">Пусто</p>
+        </div>
+        <div class="works__grid works__grid_disabled" id="works-grid">
+          <div class="works__work-card-sizer"></div>
+          <div class="works__gutter-sizer"></div>
+          <!-- work-card template -->
+          <div class="work-card works__work-card" id="work-card-template" style="display: none;">
+            <div class="work-card__inner">
+              <div class="work-card__pin work-card__pin_disabled"></div>
+              <div class="work-card__header">
+                <img src="images/img.png" alt="Фото" class="work-card__img">
+              </div>
+              <div class="work-card__content">
+                <h4 class="work-card__title">Мое портфолио</h4>
+                <p class="work-card__desc">Портфолио веб-разработчика.</p>
+                <div class="work-card__bottom">
+                  <div class="work-card__tags">
+                    <div class="work-card__tag">HTML</div>
+                    <div class="work-card__tag">Sass</div>
+                    <div class="work-card__tag">JavaScript</div>
+                  </div>
+                  <div class="work-card__links">
+                    <a href="##" class="work-card__link work-card__link_web"></a>
+                    <a href="##" class="work-card__link work-card__link_github"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button works__button works__button_disabled" id="show-more-works">
+          <span class="button__inner">Показать больше</span>
+        </button>
+      </div>
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="container contact__container">
+        <h2 class="contact__title">Связаться со мной</h2>
+        <div class="row contact__row">
+          <div class="col">
+            <div class="contact__content">
+              <p class="contact__desc">Если у вас есть вопросы, предложения или просто хотите поделиться своим мнением, пожалуйста, не стесняйтесь связаться со мной. Я всегда рад общению и готов ответить на любые ваши вопросы.</p>
+              <p class="contact__email js-email">email@email.com</p>
+              <div class="contact__links">
+                <a href="##" class="contact__link contact__link_icon_vk js-vk-link"></a>
+                <a href="##" class="contact__link contact__link_icon_telegram js-tg-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+              <div class="code contact__code" id="contact-code">
+                <div class="code__header"></div>
+                <div class="code__content">
+                  <div class="code__line-numbers"></div>
+                  <div class="code__code-container"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <p class="footer__copyright js-year">© Andrey, @__%%__YEAR__%%__@</p>
+          <a href="##" class="footer__link-icon footer__link-icon_github js-github-link"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="main.js" defer></script>
+</body>
+</html>

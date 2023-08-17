@@ -1,0 +1,62 @@
+@mixin font-face($family, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src:
+      url($path + '.woff') format('woff'),
+      url($path + '.woff2') format('woff2');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button-reset {
+  cursor: pointer;
+  padding: 0;
+  border-style: none;
+}
+
+@mixin icon($path, $width, $height) {
+  display: block;
+  background-image: url($path);
+  background-size: 100% 100%;
+  width: $width;
+  height: $height;
+}
+
+// breakpoints
+@mixin xxl {
+  @media (max-width: map-get($breakpoints, xxl)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}

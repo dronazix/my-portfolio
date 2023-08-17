@@ -1,0 +1,59 @@
+@use 'sass:math';
+
+.hamburger-nav {
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-child(n+2) {
+      margin-top: 24px;
+    }
+
+    &::before {
+      $half-padding-left-menu: math.div($hamburger-menu-padding-left, 2);
+      $half-width: math.div($hamburger-menu-item-circle-width, 2);
+
+      content: '';
+
+      display: block;
+
+      position: absolute;
+      right: 100%;
+      top: 50%;
+
+      transform: translate(
+        -($half-padding-left-menu + $half-width + 1px),
+        -50%
+      );
+
+      transition: transform 0.2s ease-in-out;
+
+      width: $hamburger-menu-item-circle-width;
+      height: $hamburger-menu-item-circle-height;
+
+      margin-right: $half-padding-left-menu - $half-width;
+
+      background-color: $hamburger-menu-item-circle-bg;
+      border-radius: 50%;
+    }
+
+    &_current::before {
+      transform: translate(0, -50%);
+    }
+  }
+
+  &__link {
+    display: block;
+
+    color: $nav-link-color;
+
+    @extend %typo-large-text;
+
+    &:hover {
+      color: $accent-1;
+    }
+  }
+}

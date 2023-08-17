@@ -1,0 +1,110 @@
+.work-card {
+  background-color: $main-bg;
+
+  &__inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__header {
+    position: relative;
+    padding-top: 56.25%;
+
+    background-color: $work-card-header-bg;
+    border: 1px solid $work-card-border-color;
+    border-radius: 12px 12px 0 0;
+
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    top: -50%;
+    bottom: -50%;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  &__pin {
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    z-index: 20;
+
+    @include icon('images/icons/pin.svg', 24px, 24px);
+
+    &_disabled {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 16px 16px 24px;
+    border: 1px solid $work-card-border-color;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  &__title {
+    @extend %typo-heading-4;
+  }
+
+  &__desc {
+    @extend %typo-normal-text;
+
+    margin-top: 8px;
+  }
+
+  &__bottom {
+    margin-top: 16px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  &__tag {
+    @extend %typo-small-text;
+
+    color: $work-card-tag-color;
+
+    &:nth-child(n-2) {
+      margin-right: 16px;
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__link {
+    $icon-width: 24px;
+    $icon-height: 24px;
+
+    &:nth-child(n+2) {
+      margin-left: 16px;
+    }
+
+    &_web {
+      @include icon('images/icons/link.svg', $icon-width, $icon-height)
+    }
+
+    &_github {
+      @include icon('images/icons/github.svg', $icon-width, $icon-height)
+    }
+
+    &:hover {
+      filter: brightness($icon-filter-brightness-value);
+    }
+  }
+}

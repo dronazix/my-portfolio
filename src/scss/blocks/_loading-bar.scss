@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+.loading-bar {
+  position: relative;
+
+  width: $loading-bar-size;
+  height: $loading-bar-size;
+
+  border-radius: $loading-bar-border-radius;
+
+  overflow: hidden;
+
+
+  &::before {
+    $before-size: $loading-bar-size - $loading-bar-margin * 2;
+    $border-ratio: math.div($loading-bar-border-radius, $loading-bar-size);
+
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    margin: $loading-bar-margin;
+
+    background-color: $main-bg;
+    border-radius: $before-size * $border-ratio;
+  }
+
+  &::after {
+    content: '';
+
+    display: block;
+
+    position: absolute;
+    left: -15%;
+    right: -15%;
+    top: -15%;
+    bottom: -15%;
+    z-index: 0;
+
+    background-image: $loading-bar-gradient;
+
+    animation: rotate-gradient linear 1s infinite;
+  }
+}

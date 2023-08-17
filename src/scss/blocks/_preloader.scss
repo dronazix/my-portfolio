@@ -1,0 +1,38 @@
+.preloader {
+  background-color: $main-bg;
+
+  &__inner {
+    box-sizing: border-box;
+
+    display: flex;
+
+    padding-left: $gap-side;
+    padding-right: $gap-side;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__loading-bar {
+    flex: 0 0 auto;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    position: absolute;
+    bottom: $preloader-logo-bottom;
+
+    width: $preloader-logo-width;
+    height: $preloader-logo-height;
+
+    background-image: url(images/grey-logo.svg);
+    background-size: 100% 100%;
+  }
+}
