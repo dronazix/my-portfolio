@@ -15,7 +15,7 @@ export const defaultContent = {
     username: '',
     profile_url: ''
   },
-  email: 'email@email.com',
+  email: '',
   vk_url: '',
   telegram_url: '',
   code_templates: {

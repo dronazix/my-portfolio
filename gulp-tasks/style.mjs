@@ -4,10 +4,11 @@ import gulpSass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 import gulpif from 'gulp-if'
+import rename from 'gulp-rename'
 
 const sass = gulpSass(dartSass)
 
-export function createStyle(gulp, bs) {
+export function createStyle(gulp, bs, hash) {
   const isDev = process.env.NODE_ENV === 'development'
 
   function style() {
@@ -17,6 +18,7 @@ export function createStyle(gulp, bs) {
       .pipe(autoprefixer())
       .pipe(gulpif(!isDev, cleanCSS({level: 2})))
       .pipe(gulpif(isDev, sourcemaps.write('.')))
+      .pipe(gulpif(!isDev, rename(`main.${hash}.css`)))
       .pipe(gulp.dest('build'))
       .pipe(gulpif(isDev, bs.stream()))
   }

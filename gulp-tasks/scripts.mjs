@@ -5,8 +5,9 @@ import sourcemaps from 'gulp-sourcemaps'
 import uglify from 'gulp-uglify-es'
 import babelify from 'babelify'
 import gulpif from 'gulp-if'
+import rename from 'gulp-rename'
 
-export function createScripts(gulp, bs) {
+export function createScripts(gulp, bs, hash) {
   const isDev = process.env.NODE_ENV === 'development'
 
   function scripts() {
@@ -22,6 +23,7 @@ export function createScripts(gulp, bs) {
       .pipe(gulpif(isDev, sourcemaps.init({loadMaps: true})))
       .pipe(uglify.default())
       .pipe(gulpif(isDev, sourcemaps.write('.')))
+      .pipe(gulpif(!isDev, rename(`main.${hash}.js`)))
       .pipe(gulp.dest('build'))
       .pipe(gulpif(isDev, bs.stream()))
   }

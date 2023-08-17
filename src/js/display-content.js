@@ -48,7 +48,7 @@ export function displayContent(content) {
   })
 
   Array.from(emails).forEach(function (email) {
-    email.innerText = content.email
+    email.innerText = content.email || 'email@email.com'
   })
 
   Array.from(vkLinks).forEach(function (vk) {

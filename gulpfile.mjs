@@ -1,5 +1,6 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
+import h from 'node-random-chars'
 
 import {createClean} from './gulp-tasks/clean.mjs'
 import {createTemplates} from './gulp-tasks/templates.mjs'
@@ -14,11 +15,12 @@ import {createCopy} from './gulp-tasks/copy.mjs'
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 const bs = browserSync.create()
+const hash = h.create(16)
 
 const clean = createClean()
-const templates = createTemplates(gulp, bs)
-const style = createStyle(gulp, bs)
-const scripts = createScripts(gulp, bs)
+const templates = createTemplates(gulp, bs, hash)
+const style = createStyle(gulp, bs, hash)
+const scripts = createScripts(gulp, bs, hash)
 const fonts = createFonts(gulp)
 const images = createImages(gulp, bs)
 const serve = createServe(bs)
