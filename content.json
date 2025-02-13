@@ -1,10 +1,10 @@
 {
   "github": {
-    "username": "dddoog9",
-    "profile_url": "https://github.com/dddoog9"
+    "username": "dronazix",
+    "profile_url": "https://github.com/dronazix"
   },
-  "email": "andrey.devv@mail.ru",
-  "vk_url": "https://vk.com/dddoogg",
+  "email": "",
+  "vk_url": "",
   "telegram_url": "",
   "code_templates": {
     "hero": "/* Обо мне */\n\nclass I {\n  name = 'Андрей'\n  age = @__%%__AGE__%%__@\n  skills = [\n@__%    '%__SKILLS__%'%__@\n  ]\n}\n\nexport {I}\n",
