@@ -1,9 +1,9 @@
 {
   "name": "Мое портфолио",
   "description": "Портфолио веб-разработчика.",
-  "image_url": "https://github.com/dddoog9/my-portfolio/raw/main/cover.jpg",
+  "image_url": "https://github.com/dronazix/my-portfolio/raw/main/cover.jpg",
   "pin": 0,
   "tags": ["HTML", "SASS", "JavaScript"],
-  "website_url": "https://dddoog9.github.io/my-portfolio/",
-  "github_url": "https://github.com/dddoog9/my-portfolio"
+  "website_url": "https://dronazix.github.io/my-portfolio/",
+  "github_url": "https://github.com/dronazix/my-portfolio"
 }
