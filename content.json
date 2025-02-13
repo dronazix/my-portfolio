@@ -4,7 +4,7 @@
     "profile_url": "https://github.com/dronazix"
   },
   "email": "",
-  "vk_url": "https://vk.com/dronazix",
+  "vk_url": "",
   "telegram_url": "",
   "code_templates": {
     "hero": "/* Обо мне */\n\nclass I {\n  name = 'Андрей'\n  age = @__%%__AGE__%%__@\n  skills = [\n@__%    '%__SKILLS__%'%__@\n  ]\n}\n\nexport {I}\n",
