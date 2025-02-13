@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://dddoog9.github.io/my-portfolio/",
+  "homepage": "https://dronazix.github.io/my-portfolio/",
   "scripts": {
     "clean": "gulp clean",
     "build": "cross-env NODE_ENV=production gulp build",
